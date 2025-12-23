@@ -1,5 +1,5 @@
 ---
-title: Homo
+title: Home
 slug: /
 sections:
   - type: GenericSection
