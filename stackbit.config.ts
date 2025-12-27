@@ -1,6 +1,7 @@
 import { defineStackbitConfig, DocumentStringLikeFieldNonLocalized, SiteMapEntry } from '@stackbit/types';
 import { GitContentSource } from '@stackbit/cms-git';
 import { allModels } from 'sources/local/models';
+import { HeroSection } from './sources/local/models';
 
 const gitContentSource = new GitContentSource({
     rootPath: __dirname,
