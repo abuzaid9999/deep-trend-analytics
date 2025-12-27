@@ -16,7 +16,10 @@ sections:
         image:
           type: ImageBlock
           url: /images/img-placeholder.svg
-          altText: Featured item
+          altText: >-
+            Primary Color: #2563eb (Blue)Secondary Color: #7c3aed (Purple)
+            Accent Color: #06b6d4 (Cyan)Background: #f8fafc (Light Gray)Text:
+            #1e293b (Dark Slate)
           styles:
             self:
               borderRadius: medium
