@@ -19,7 +19,7 @@ sections:
           altText: >-
             Primary Color: #2563eb (Blue)Secondary Color: #7c3aed (Purple)
             Accent Color: #06b6d4 (Cyan)Background: #f8fafc (Light Gray)Text:
-            #1e293b (Dark Slate)
+            #1e293b (Dark Slate)Featured item
           styles:
             self:
               borderRadius: medium
