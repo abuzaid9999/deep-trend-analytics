@@ -11,17 +11,17 @@
     <tbody>
       <tr>
         <td>AI Trend Report</td>
-        <td>$497</td>
+        <td>$397</td>
         <td>10+ trends, actionable insights</td>
       </tr>
       <tr>
         <td>Strategy Session</td>
-        <td>$997</td>
+        <td>$797</td>
         <td>90-min consultation, roadmap</td>
       </tr>
       <tr>
         <td>Monthly Briefing</td>
-        <td>$2,997/mo</td>
+        <td>$2,497/mo</td>
         <td>Weekly updates, priority access</td>
       </tr>
       <tr>
