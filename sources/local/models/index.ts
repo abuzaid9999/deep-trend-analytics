@@ -87,4 +87,5 @@ export const allModels = {
     MetaTag,
     FooterLinksGroup,
     Seo
+    export * from './HeroSection';
 };
