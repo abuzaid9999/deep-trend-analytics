@@ -1,26 +1,13 @@
-import { defineDocument, defineField } from '@stackbit/types';
+import { defineType } from '@stackbit/types';
 
-export const ServicesSection = defineDocument({
-    name: 'ServicesSection',
-    label: 'Services Section',
-    type: 'object',
-    fields: [
-        defineField({
-            name: 'title',
-            type: 'string',
-            label: 'Title'
-        }),
-        defineField({
-            name: 'services',
-            type: 'list',
-            label: 'Services',
-            items: {
-                type: 'object',
-                fields: [
-                    { name: 'title', type: 'string', label: 'Service Title' },
-                    { name: 'description', type: 'string', label: 'Description' }
-                ]
-            }
-        })
-    ]
+export const ServicesSection = defineType({
+  name: 'servicesSection',
+  type: 'object',
+  label: 'Services',
+  fields: [
+    { name: 'title', type: 'string', label: 'Title', required: true },
+    { name: 'subtitle', type: 'string', label: 'Subtitle' },
+    { name: 'services', type: 'array', label: 'Services', items: { type: 'object', models: ['ServiceItem'] } },
+    { name: 'backgroundImage', type: 'image', label: 'Background Image' }
+  ]
 });
