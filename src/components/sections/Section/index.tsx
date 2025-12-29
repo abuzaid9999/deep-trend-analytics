@@ -5,7 +5,7 @@ import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to
 import { getDataAttrs } from '../../../utils/get-data-attrs';
 import BackgroundImage from '../../atoms/BackgroundImage';
 
-export { default as GenericSection } from './GenericSection';
+export { default as GenericSection } from '../GenericSection';
 export { default as ImageGallerySection } from './ImageGallerySection';
 export { default as PricingSection } from './PricingSection';
 export { default as HeroSection } from './HeroSection';
