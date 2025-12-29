@@ -1,19 +1,14 @@
-import { defineDocument, defineField } from '@stackbit/types';
+import { defineType } from '@stackbit/types';
 
-export const ResearchSection = defineDocument({
-    name: 'ResearchSection',
-    label: 'Research Section',
-    type: 'object',
-    fields: [
-        defineField({
-            name: 'title',
-            type: 'string',
-            label: 'Title'
-        }),
-        defineField({
-            name: 'content',
-            type: 'markdown',
-            label: 'Content'
-        })
-    ]
+export const ResearchSection = defineType({
+  name: 'researchSection',
+  type: 'object',
+  label: 'Research',
+  fields: [
+    { name: 'title', type: 'string', label: 'Title', required: true },
+    { name: 'subtitle', type: 'string', label: 'Subtitle' },
+    { name: 'reports', type: 'array', label: 'Reports', items: { type: 'object', models: ['ResearchReport'] } },
+    { name: 'ctaText', type: 'string', label: 'CTA Text' },
+    { name: 'ctaUrl', type: 'string', label: 'CTA URL' }
+  ]
 });
