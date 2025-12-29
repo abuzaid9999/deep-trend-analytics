@@ -1,19 +1,13 @@
-import { defineDocument, defineField } from '@stackbit/types';
+import { defineType } from '@stackbit/types';
 
-export const ContactSection = defineDocument({
-    name: 'Contact Section',
-    label: 'Contact Section',
-    type: 'object',
-    fields: [
-        defineField({
-            name: 'title',
-            type: 'string',
-            label: 'Title'
-        }),
-        defineField({
-            name: 'email',
-            type: 'string',
-            label: 'Email'
-        })
-    ]
+export const ContactSection = defineType({
+  name: 'contactSection',
+  type: 'object',
+  label: 'Contact',
+  fields: [
+    { name: 'title', type: 'string', label: 'Title', required: true },
+    { name: 'subtitle', type: 'string', label: 'Subtitle' },
+    { name: 'formId', type: 'string', label: 'Form ID', required: true },
+    { name: 'backgroundImage', type: 'image', label: 'Background Image' }
+  ]
 });
