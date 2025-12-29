@@ -38,10 +38,13 @@ import { ThemeStyleHeading } from './ThemeStyleHeading';
 import { ThemeStyleLink } from './ThemeStyleLink';
 import { TitleBlock } from './TitleBlock';
 import { VideoBlock } from './VideoBlock';
-
 import { MetaTag } from './MetaTag';
 import { FooterLinksGroup } from './FooterLinksGroup';
 import { Seo } from './Seo';
+import { HeroSection } from './HeroSection';
+import { ServicesSection } from './ServicesSection';
+import { ResearchSection } from './ResearchSection';
+import { ContactSection } from './ContactSection';
 
 export const allModels = {
     BackgroundImage,
