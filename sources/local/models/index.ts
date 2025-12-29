@@ -75,6 +75,10 @@ export const allModels = {
     PricingPlan,
     PricingSection,
     RecentPostsSection,
+    HeroSection,
+    ServicesSection,
+    ResearchSection,
+    ContactSection,
     SelectFormControl,
     Social,
     SubNav,
@@ -91,5 +95,3 @@ export const allModels = {
     FooterLinksGroup,
     Seo
 };
-    export * from './HeroSection';
-
