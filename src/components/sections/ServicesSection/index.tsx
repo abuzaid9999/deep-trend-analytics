@@ -1,11 +1,13 @@
-<section className="py-20 max-w-6xl mx-auto">
-  <h2 className="text-3xl font-bold text-center mb-12">
-    Our AI Research Services
-  </h2>
-  <ul className="grid md:grid-cols-2 gap-6 text-lg">
-    <li>✓ <strong>AI Market Intelligence Reports</strong> — $397</li>
-    <li>✓ <strong>Custom AI Strategy Sessions</strong> — $797</li>
-    <li>✓ <strong>Monthly AI Briefing Subscription</strong> — $2497/mo</li>
-    <li>✓ <strong>Enterprise AI Implementation</strong> — Custom</li>
-  </ul>
-</section>
+import { defineType } from '@stackbit/types';
+
+export const ServicesSection = defineType({
+  name: 'servicesSection',
+  type: 'object',
+  label: 'Services',
+  fields: [
+    { name: 'title', type: 'string', label: 'Title', required: true },
+    { name: 'subtitle', type: 'string', label: 'Subtitle' },
+    { name: 'services', type: 'array', label: 'Services', items: { type: 'object', models: ['ServiceItem'] } },
+    { name: 'backgroundImage', type: 'image', label: 'Background Image' }
+  ]
+});
