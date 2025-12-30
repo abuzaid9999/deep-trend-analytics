@@ -1,11 +1,14 @@
-<section id="research" className="py-20 bg-slate-100 text-center">
-  <h2 className="text-3xl font-bold mb-6">
-    Latest Research: AI LLMs in 2025
-  </h2>
-  <p className="mb-6">
-    Download a free excerpt with 10 key trends shaping AI adoption.
-  </p>
-  <a href="/reports/llm-2025.pdf" className="px-6 py-3 bg-slate-900 text-white rounded-lg">
-    Download Free Excerpt
-  </a>
-</section>
+import { defineType } from '@stackbit/types';
+
+export const ResearchSection = defineType({
+  name: 'researchSection',
+  type: 'object',
+  label: 'Research',
+  fields: [
+    { name: 'title', type: 'string', label: 'Title', required: true },
+    { name: 'subtitle', type: 'string', label: 'Subtitle' },
+    { name: 'reports', type: 'array', label: 'Reports', items: { type: 'object', models: ['ResearchReport'] } },
+    { name: 'ctaText', type: 'string', label: 'CTA Text' },
+    { name: 'ctaUrl', type: 'string', label: 'CTA URL' }
+  ]
+});
