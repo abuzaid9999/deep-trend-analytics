@@ -1,34 +1,30 @@
 import { Model } from '@stackbit/types';
 
-export const ServiceItem: Model = {
-    type: 'object',
-    name: 'ServiceItem',
-    label: 'Service Item',
-    fields: [
+export const ServicesSection: Model = {
+  name: 'ServicesSection',
+  label: 'Services Section',
+  type: 'object',
+  labelField: 'title',
+  fields: [
+    {
+      name: 'title',
+      type: 'string',
+      label: 'Title',
+      required: true
+    },
+    {
+      name: 'items',
+      type: 'array',
+      of: [
         {
-            type: 'string',
-            name: 'title',
-            label: 'Title',
-            required: true
-        },
-        {
-            type: 'string',
-            name: 'description',
-            label: 'Description',
-            required: false
-        },
-        {
-            type: 'image',
-            name: 'icon',
-            label: 'Icon',
-            required: false
-        },
-        {
-            type: 'model',
-            name: 'action',
-            label: 'Action',
-            models: ['Button', 'Link'],
-            required: false
+          type: 'object',
+          name: 'item',
+          fields: [
+            { name: 'name', type: 'string', label: 'Name' },
+            { name: 'description', type: 'string', label: 'Description' }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 };
