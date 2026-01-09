@@ -1,10 +1,9 @@
 import { Model } from '@stackbit/types';
 
-export const PricingSection: Model = {
+export const ServiceItem: Model = {
     type: 'object',
-    name: 'PricingSection',
-    label: 'Pricing Section',
-    labelField: 'title',
+    name: 'ServiceItem',
+    label: 'Service Item',
     fields: [
         {
             type: 'string',
@@ -14,38 +13,22 @@ export const PricingSection: Model = {
         },
         {
             type: 'string',
-            name: 'subtitle',
-            label: 'Subtitle'
+            name: 'description',
+            label: 'Description',
+            required: false
         },
         {
-            type: 'list',
-            name: 'plans',
-            label: 'Pricing Plans',
-            items: {
-                type: 'model',
-                models: ['PricingPlan']
-            }
-        },
-        {   type: 'model',
-            name: 'backgroundImage',
-            label: 'Background Image',
-            models: ['BackgroundImage'],
-            group: 'styles'
+            type: 'image',
+            name: 'icon',
+            label: 'Icon',
+            required: false
         },
         {
-            type: 'enum',
-            name: 'colors',
-            label: 'Colors',
-            default: 'bg-light-fg-dark',
-            options: [
-                { label: 'Light', value: 'bg-light-fg-dark' },
-                { label: 'Neutral', value: 'bg-neutral-fg-dark' },
-                { label: 'Dark', value: 'bg-dark-fg-light' }
-            ],
-            group: 'styles'
+            type: 'model',
+            name: 'action',
+            label: 'Action',
+            models: ['Button', 'Link'],
+            required: false
         }
-    ],
-    fieldGroups: [
-        { name: 'styles', label: 'Styles', icon: 'palette' }
     ]
 };
