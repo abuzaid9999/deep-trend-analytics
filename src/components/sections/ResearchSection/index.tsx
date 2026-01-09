@@ -26,7 +26,8 @@ export const ResearchSection: Model = {
                 models: ['ResearchReport']
             }
         },
-        {    type: 'model',
+        {
+            type: 'model',
             name: 'backgroundImage',
             label: 'Background Image',
             models: ['BackgroundImage'],
